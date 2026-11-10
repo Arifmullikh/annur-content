@@ -167,12 +167,35 @@
       "name_en": "Jami` at-Tirmidhi",
       "publication": "ইসলামিক ফাউন্ডেশন / Islamic Foundation",
       "chapters": 48,
-      "hadith_count": 3956,
-      "claimed": 3956,
-      "file": "hadith/tirmidhi.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "hadith_count": 3959,
+      "claimed": 3959,
+      "file": "hadith/tirmidhi.sqlite.gz.b64",
+      "size": 3723555,
+      "sha256": "cb2fa0878297f8c7c56cfd4e4889c06b574331e06bf28decbdb3d5b2123c5069",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 23863296,
+      "got": 3959,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 3956,
+      "unique_numbers": 3956,
+      "missing_numbers": [],
+      "issues": [
+        "3 numbers appear more than once (815, 816, 945); unique numbers 3956 in 1..3956; packed 3959 matches list count (source numbering, not invented)"
+      ],
+      "parts": [
+        "hadith/tirmidhi.sqlite.gz.b64.part01",
+        "hadith/tirmidhi.sqlite.gz.b64.part02",
+        "hadith/tirmidhi.sqlite.gz.b64.part03"
+      ],
+      "encoded_size": 5030066,
+      "duplicate_numbers": [
+        815,
+        816,
+        945
+      ]
     },
     {
       "id": "abudawud",
@@ -182,12 +205,60 @@
       "name_en": "Sunan Abi Dawud",
       "publication": "ইসলামিক ফাউন্ডেশন / Islamic Foundation",
       "chapters": 36,
-      "hadith_count": 5184,
-      "claimed": 5184,
-      "file": "hadith/abudawud.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "hadith_count": 5202,
+      "claimed": 5202,
+      "file": "hadith/abudawud.sqlite.gz.b64",
+      "size": 4316162,
+      "sha256": "39f45d0ac7e75e6a37afb0f0d48b4187787330957a3c08f4dce164e3484a18bb",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 27410432,
+      "got": 5202,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 5184,
+      "unique_numbers": 5177,
+      "missing_numbers": [
+        2175,
+        2382,
+        3695,
+        3812,
+        3813,
+        3814,
+        4183
+      ],
+      "issues": [
+        "7 unused number(s) in 1..5184: 2175, 2382, 3695, 3812, 3813, 3814, 4183 (source gap, not invented)",
+        "19 numbers appear more than once (2174, 2383, 3261, 3268, 3271 x4, 3276 x3, 3278 x3, 3280 x4, 3392, 3694, 4010, 4012, 4058, 4087, 4182, 4240, 4396, 4636, 4999); unique 5177; packed 5202 matches list count (source numbering, not invented)"
+      ],
+      "parts": [
+        "hadith/abudawud.sqlite.gz.b64.part01",
+        "hadith/abudawud.sqlite.gz.b64.part02",
+        "hadith/abudawud.sqlite.gz.b64.part03"
+      ],
+      "encoded_size": 5830607,
+      "duplicate_numbers": [
+        2174,
+        2383,
+        3261,
+        3268,
+        3271,
+        3276,
+        3278,
+        3280,
+        3392,
+        3694,
+        4010,
+        4012,
+        4058,
+        4087,
+        4182,
+        4240,
+        4396,
+        4636,
+        4999
+      ]
     },
     {
       "id": "nasai",
