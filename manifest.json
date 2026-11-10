@@ -26,7 +26,8 @@
         "hadith/bukhari.sqlite.gz.b64.part03",
         "hadith/bukhari.sqlite.gz.b64.part04",
         "hadith/bukhari.sqlite.gz.b64.part05"
-      ]
+      ],
+      "book_metadata_hadiths": 7053
     },
     {
       "id": "muslim",
@@ -106,7 +107,9 @@
       ],
       "encoded_size": 1741858,
       "api_book_total_hadith": 1906,
-      "api_book_total_section": 17
+      "api_book_total_section": 17,
+      "book_metadata_hadiths": 1906,
+      "book_metadata_sections": 17
     },
     {
       "id": "mishkat",
@@ -157,7 +160,8 @@
       ],
       "encoded_size": 5308125,
       "api_book_total_hadith": 6295,
-      "api_book_total_section": 31
+      "api_book_total_section": 31,
+      "book_metadata_hadiths": 6295
     },
     {
       "id": "tirmidhi",
@@ -183,7 +187,8 @@
       "unique_numbers": 3956,
       "missing_numbers": [],
       "issues": [
-        "3 numbers appear more than once (815, 816, 945); unique numbers 3956 in 1..3956; packed 3959 matches list count (source numbering, not invented)"
+        "3 numbers appear more than once (815, 816, 945); unique numbers 3956 in 1..3956; packed 3959 matches list count (source numbering, not invented)",
+        "Book metadata claims 3956 hadiths (equal to unique numbers 1..3956); packed 3959 matching the complete list payload because 815, 816 and 945 appear twice."
       ],
       "parts": [
         "hadith/tirmidhi.sqlite.gz.b64.part01",
@@ -195,7 +200,8 @@
         815,
         816,
         945
-      ]
+      ],
+      "book_metadata_hadiths": 3956
     },
     {
       "id": "abudawud",
@@ -230,7 +236,8 @@
       ],
       "issues": [
         "7 unused number(s) in 1..5184: 2175, 2382, 3695, 3812, 3813, 3814, 4183 (source gap, not invented)",
-        "19 numbers appear more than once (2174, 2383, 3261, 3268, 3271 x4, 3276 x3, 3278 x3, 3280 x4, 3392, 3694, 4010, 4012, 4058, 4087, 4182, 4240, 4396, 4636, 4999); unique 5177; packed 5202 matches list count (source numbering, not invented)"
+        "19 numbers appear more than once (2174, 2383, 3261, 3268, 3271 x4, 3276 x3, 3278 x3, 3280 x4, 3392, 3694, 4010, 4012, 4058, 4087, 4182, 4240, 4396, 4636, 4999); unique 5177; packed 5202 matches list count (source numbering, not invented)",
+        "Book metadata claims 5184 hadiths (the number range 1..5184); packed 5202 matching the complete list payload."
       ],
       "parts": [
         "hadith/abudawud.sqlite.gz.b64.part01",
@@ -258,7 +265,8 @@
         4396,
         4636,
         4999
-      ]
+      ],
+      "book_metadata_hadiths": 5184
     },
     {
       "id": "nasai",
@@ -409,7 +417,8 @@
       "parts": [
         "hadith/shamail.sqlite.gz.b64.part01"
       ],
-      "encoded_size": 255332
+      "encoded_size": 255332,
+      "book_metadata_hadiths": 415
     },
     {
       "id": "tahawi",
@@ -2810,14 +2819,16 @@
       ],
       "issues": [
         "2367 unused number(s) in 1..7508: 49, 94, 99, 100, 104, 105, 118, 120, 126, 130, 138, 145, 146, 147, 151, 164, 165, 166, 168, 174, 183, 189, 190, 191, 194, 196, 204, 207, 212, 218 ... plus 2337 more (source gap, not invented)",
-        "4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches list count (source numbering, not invented)"
+        "4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches list count (source numbering, not invented)",
+        "Book metadata claims 7510 hadiths (near the 1..7508 number range); packed 5145 matching the complete list payload."
       ],
       "parts": [
         "hadith/tahawi.sqlite.gz.b64.part01",
         "hadith/tahawi.sqlite.gz.b64.part02",
         "hadith/tahawi.sqlite.gz.b64.part03"
       ],
-      "encoded_size": 5951330
+      "encoded_size": 5951330,
+      "book_metadata_hadiths": 7510
     },
     {
       "id": "musnad-abu-hanifa",
@@ -2885,12 +2896,14 @@
         799
       ],
       "issues": [
-        "3 numbers appear more than once (656, 700, 799); unique 1010; packed 1013 matches list count (source numbering, not invented)"
+        "3 numbers appear more than once (656, 700, 799); unique 1010; packed 1013 matches list count (source numbering, not invented)",
+        "Book metadata claims 1007 hadiths; packed 1013 matching the complete list payload."
       ],
       "parts": [
         "hadith/muwatta-muhammad.sqlite.gz.b64.part01"
       ],
-      "encoded_size": 1453825
+      "encoded_size": 1453825,
+      "book_metadata_hadiths": 1007
     },
     {
       "id": "adabul-mufrad",
@@ -2955,11 +2968,14 @@
       "unique_numbers": 2709,
       "missing_numbers": [],
       "duplicate_numbers": [],
-      "issues": [],
+      "issues": [
+        "Book metadata claims 2710 hadiths; packed 2709 matching the complete list payload (numbers 1..2709 contiguous, no unused or duplicate numbers)."
+      ],
       "parts": [
         "hadith/fiqhus-sunan.sqlite.gz.b64.part01"
       ],
-      "encoded_size": 2110741
+      "encoded_size": 2110741,
+      "book_metadata_hadiths": 2710
     },
     {
       "id": "akhlaqun-nabi",
@@ -3019,7 +3035,8 @@
       "parts": [
         "hadith/akhlaqun-nabi.sqlite.gz.b64.part01"
       ],
-      "encoded_size": 665268
+      "encoded_size": 665268,
+      "book_metadata_hadiths": 895
     },
     {
       "id": "musnad-ahmad",
@@ -3028,13 +3045,38 @@
       "name_ar": "الفتح الرباني لترتيب مسند الإمام أحمد بن حنبل الشيباني",
       "name_en": "Al Musnad - Imam Ahmad",
       "publication": "বাংলাদেশ ইসলামিক সেন্টার / Bangladesh Islamic Centre",
-      "chapters": 66,
-      "hadith_count": 27647,
-      "claimed": 27647,
-      "file": "hadith/musnad-ahmad.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "chapters": 47,
+      "hadith_count": 5643,
+      "claimed": 6424,
+      "file": "hadith/musnad-ahmad.sqlite.gz.b64",
+      "size": 2706711,
+      "sha256": "4f3fc8a8f4d2adc53d75cf8523928455f35db08342352fff489708843853b764",
+      "ready": true,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "sqlite_size": 17559552,
+      "encoding": "base64",
+      "got": 5643,
+      "number_min": 1,
+      "number_max": 1732,
+      "unique_numbers": 1732,
+      "missing_numbers": [],
+      "duplicate_numbers": [],
+      "issues": [
+        "List API count is 6424 because 781 list rows are identical repeats of the same id on adjacent pages (pagination overlap). 5643 unique source row ids were packed; no wording was dropped. Compared identical payloads for all 727 duplicated ids.",
+        "Book metadata claims 27647 hadiths and 66 sections; the chapters endpoint returned 47 and the complete unique list payload is 5643 rows. Packed that list only; nothing invented to fill the metadata figure.",
+        "564 of 1732 numbers in 1..1732 are reused (source numbering in this Fathur Rabbani edition); unique 1732; packed 5643 unique rows (source numbering, not invented)."
+      ],
+      "parts": [
+        "hadith/musnad-ahmad.sqlite.gz.b64.part01",
+        "hadith/musnad-ahmad.sqlite.gz.b64.part02"
+      ],
+      "encoded_size": 3656435,
+      "duplicate_numbers_count": 564,
+      "list_api_count": 6424,
+      "list_duplicate_ids_repeats": 781,
+      "book_metadata_hadiths": 27647,
+      "book_metadata_sections": 66
     },
     {
       "id": "targhib",
@@ -3044,12 +3086,46 @@
       "name_en": "At-Targhib wat-Tarhib",
       "publication": "",
       "chapters": 26,
-      "hadith_count": 5766,
-      "claimed": 5766,
-      "file": "hadith/targhib.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "hadith_count": 5793,
+      "claimed": 5793,
+      "file": "hadith/targhib.sqlite.gz.b64",
+      "size": 3024041,
+      "sha256": "e0e443115c3a5aac7b8edb2b02028be15c7fb9f5b654dd965df8c2e39541d8ab",
+      "ready": true,
+      "empty_arabic": 1,
+      "empty_bangla": 0,
+      "sqlite_size": 21692416,
+      "encoding": "base64",
+      "got": 5793,
+      "number_min": 1,
+      "number_max": 5798,
+      "unique_numbers": 5792,
+      "missing_numbers": [
+        1309,
+        1677,
+        2109,
+        3910,
+        3982,
+        4687
+      ],
+      "duplicate_numbers": [
+        1310
+      ],
+      "issues": [
+        "6 unused number(s) in 1..5798: 1309, 1677, 2109, 3910, 3982, 4687 (source gap, not invented)",
+        "1 number appears more than once (1310); unique 5792; packed 5793 matches list count (source numbering, not invented)",
+        "1 row (number 4386, source id 1621807) has empty Arabic in the source; left empty, not invented. Bangla is present.",
+        "Book metadata claims 5766 hadiths; packed 5793 matching the complete list payload."
+      ],
+      "parts": [
+        "hadith/targhib.sqlite.gz.b64.part01",
+        "hadith/targhib.sqlite.gz.b64.part02"
+      ],
+      "encoded_size": 4085110,
+      "empty_arabic_numbers": [
+        4386
+      ],
+      "book_metadata_hadiths": 5766
     }
   ],
   "repo": "https://github.com/Arifmullikh/annur-content",
