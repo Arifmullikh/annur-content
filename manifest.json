@@ -38,10 +38,38 @@
       "chapters": 58,
       "hadith_count": 7292,
       "claimed": 7292,
-      "file": "hadith/muslim.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "file": "hadith/muslim.sqlite.gz.b64",
+      "size": 5774027,
+      "sha256": "023874932f891660e60a9b7959693c9deee1737e6c9dbf977f255be970e6eaa2",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 41009152,
+      "got": 7292,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 0,
+      "number_max": 7281,
+      "unique_numbers": 7281,
+      "missing_numbers": [
+        4744
+      ],
+      "issues": [
+        "packed 7292 matches API count",
+        "11 rows share number 0 (source unnumbered/intro rows)",
+        "number 4744 unused in 0..7281 (source gap)",
+        "number 4745 appears twice (source, distinct row ids)"
+      ],
+      "parts": [
+        "hadith/muslim.sqlite.gz.b64.part01",
+        "hadith/muslim.sqlite.gz.b64.part02",
+        "hadith/muslim.sqlite.gz.b64.part03",
+        "hadith/muslim.sqlite.gz.b64.part04"
+      ],
+      "encoded_size": 7800003,
+      "duplicate_numbers": {
+        "0": 11,
+        "4745": 2
+      }
     },
     {
       "id": "riyadussalihin",
