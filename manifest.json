@@ -10,13 +10,23 @@
       "name_ar": "الجامع الصحيح للبخاري",
       "name_en": "'Al-Jami' Al-Sahih'- Bukhari",
       "publication": "ইসলামিক ফাউন্ডেশন / Islamic Foundation",
-      "chapters": 83,
-      "hadith_count": 7053,
-      "claimed": 7053,
-      "file": "hadith/bukhari.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "chapters": 84,
+      "hadith_count": 7052,
+      "claimed": 7052,
+      "file": "hadith/bukhari.sqlite.gz.b64",
+      "size": 7459225,
+      "sha256": "39ed8f71a4c7fda82a8b67938cd2a79819e57584d58a0ad00aedd71ca6718edc",
+      "ready": true,
+      "sqlite_size": 45084672,
+      "encoding": "base64",
+      "encoded_size": 10076500,
+      "parts": [
+        "hadith/bukhari.sqlite.gz.b64.part01",
+        "hadith/bukhari.sqlite.gz.b64.part02",
+        "hadith/bukhari.sqlite.gz.b64.part03",
+        "hadith/bukhari.sqlite.gz.b64.part04",
+        "hadith/bukhari.sqlite.gz.b64.part05"
+      ]
     },
     {
       "id": "muslim",
@@ -274,5 +284,6 @@
       "ready": false
     }
   ],
-  "repo": "https://github.com/Arifmullikh/annur-content"
+  "repo": "https://github.com/Arifmullikh/annur-content",
+  "note": "Pack files ending in .b64 are standard Base64 of the gzip. The app decodes, then verifies sha256 against the gzip digest in this manifest, then decompresses."
 }

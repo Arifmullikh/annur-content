@@ -44,4 +44,10 @@ Not included: Ma'ariful Hadith, Sahifa Hammam, Hadith Qudsi, and all Urdu books.
 
 ## Integrity
 
-Use the `sha256` and `size` fields in `manifest.json` to verify each `.sqlite.gz` file. Each file is kept well under GitHub's 100 MB limit; a book that would exceed that is split and listed as more than one file.
+Use the `sha256` and `size` fields in `manifest.json` to verify each pack. `sha256` and `size` refer to the gzip-compressed SQLite file, not the encoding wrapper.
+
+Packs are stored as Base64 text (`*.sqlite.gz.b64`) so they can be published through GitHub's text file API. The app downloads the `.b64` file, decodes it to gzip, checks the SHA-256, then decompresses. Each pack is kept well under GitHub's 100 MB limit; a book that would exceed that is split and listed as more than one file.
+
+Currently published:
+
+- `hadith/bukhari.sqlite.gz.b64.part01` … `part05` — Sahih al-Bukhari (Bangla edition, 7052 hadiths, 84 chapters). Join the parts, Base64-decode, then check sha256.
