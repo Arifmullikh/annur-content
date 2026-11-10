@@ -340,10 +340,25 @@
       "chapters": 61,
       "hadith_count": 1889,
       "claimed": 1889,
-      "file": "hadith/muwatta-malik.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "file": "hadith/muwatta-malik.sqlite.gz.b64",
+      "size": 1439247,
+      "sha256": "5b8fd7789e993a730e2a967197291df9e16757a953eb406ca148da284d5444f2",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 9248768,
+      "got": 1889,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 1889,
+      "unique_numbers": 1889,
+      "missing_numbers": [],
+      "duplicate_numbers": [],
+      "issues": [],
+      "parts": [
+        "hadith/muwatta-malik.sqlite.gz.b64.part01"
+      ],
+      "encoded_size": 1944246
     },
     {
       "id": "shamail",
@@ -353,12 +368,48 @@
       "name_en": "Ash-Shama'il Al-Muhammadiyah",
       "publication": "",
       "chapters": 2,
-      "hadith_count": 415,
-      "claimed": 415,
-      "file": "hadith/shamail.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "hadith_count": 401,
+      "claimed": 401,
+      "file": "hadith/shamail.sqlite.gz.b64",
+      "size": 189012,
+      "sha256": "30a7a68f02f8a5e2054217361f3c5cc75e0a0277e10776a0a3503930a55bdc2b",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 1294336,
+      "got": 401,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 415,
+      "unique_numbers": 400,
+      "missing_numbers": [
+        82,
+        96,
+        109,
+        140,
+        166,
+        220,
+        244,
+        251,
+        255,
+        272,
+        274,
+        278,
+        294,
+        384,
+        411
+      ],
+      "duplicate_numbers": [
+        165
+      ],
+      "issues": [
+        "15 unused number(s) in 1..415: 82, 96, 109, 140, 166, 220, 244, 251, 255, 272, 274, 278, 294, 384, 411 (source gap, not invented)",
+        "1 numbers appear more than once (165); unique 400; packed 401 matches list count (source numbering, not invented)"
+      ],
+      "parts": [
+        "hadith/shamail.sqlite.gz.b64.part01"
+      ],
+      "encoded_size": 255332
     },
     {
       "id": "tahawi",
