@@ -270,10 +270,27 @@
       "chapters": 51,
       "hadith_count": 5758,
       "claimed": 5758,
-      "file": "hadith/nasai.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "file": "hadith/nasai.sqlite.gz.b64",
+      "size": 4835711,
+      "sha256": "839c3d37a51e358a60429e4aa5fefa531e9e78df5717e31f2cf4b410845a54de",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 33734656,
+      "got": 5758,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 5758,
+      "unique_numbers": 5758,
+      "missing_numbers": [],
+      "duplicate_numbers": [],
+      "issues": [],
+      "parts": [
+        "hadith/nasai.sqlite.gz.b64.part01",
+        "hadith/nasai.sqlite.gz.b64.part02",
+        "hadith/nasai.sqlite.gz.b64.part03"
+      ],
+      "encoded_size": 6532454
     },
     {
       "id": "ibnmajah",
