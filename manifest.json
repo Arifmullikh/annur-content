@@ -2902,10 +2902,34 @@
       "chapters": 1,
       "hadith_count": 1330,
       "claimed": 1330,
-      "file": "hadith/adabul-mufrad.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "file": "hadith/adabul-mufrad.sqlite.gz.b64",
+      "size": 861402,
+      "sha256": "824b1de3c4ee7ce3cf78cb82dbac099f048a6b554a1fa815df3c3bf50ea64fb8",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 5275648,
+      "got": 1330,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 1330,
+      "unique_numbers": 1328,
+      "missing_numbers": [
+        439,
+        1141
+      ],
+      "duplicate_numbers": [
+        114,
+        459
+      ],
+      "issues": [
+        "2 unused number(s) in 1..1330: 439, 1141 (source gap, not invented)",
+        "2 numbers appear more than once (114, 459); unique 1328; packed 1330 matches list count (source numbering, not invented)"
+      ],
+      "parts": [
+        "hadith/adabul-mufrad.sqlite.gz.b64.part01"
+      ],
+      "encoded_size": 1163649
     },
     {
       "id": "fiqhus-sunan",
