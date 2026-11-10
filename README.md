@@ -41,14 +41,14 @@ Use the `sha256` and `size` fields in `manifest.json` to verify each pack. Those
 | Al-Adab Al-Mufrad | আল-আদাবুল মুফরাদ | 1330 | 1 | 841 KB | `824b1de3c4ee7ce3cf78cb82dbac099f048a6b554a1fa815df3c3bf50ea64fb8` | published |
 | Fiqh-us-Sunan | ফিকহুস সুনান | 2709 | 43 | 1.5 MB | `6ac115577c7c1e11ed5474a7be8efa8773cc00308c750b3e4d08b1558596a766` | published |
 | Akhlak-un-nabi  ﷺ | আখলাকুন্নবী (ﷺ) | 868 | 1 | 480 KB | `c2f05a2f9ca12f0f6c531804575dad4fefbf495852307fabd9fbb71435507657` | published |
-| Al Musnad - Imam Ahmad | মুসনাদে আহমদ- ইমাম আহমদ রহঃ | 5643 | 47 | 2.6 MB | `4f3fc8a8f4d2adc53d75cf8523928455f35db08342352fff489708843853b764` | published |
+| Al Musnad - Imam Ahmad | মুসনাদে আহমদ- ইমাম আহমদ রহঃ | 6424 | 47 | 2.9 MB | `b94f1625cb023e45047dc5afaaab16946cc87093e0d66cd7177c7c2f6a31bf7c` | published |
 | At-Targhib wat-Tarhib | আত্-তারগীব ওয়াত্-তারহীব | 5793 | 26 | 2.9 MB | `e0e443115c3a5aac7b8edb2b02028be15c7fb9f5b654dd965df8c2e39541d8ab` | published |
 
 Not included: Ma'ariful Hadith, Sahifa Hammam, Hadith Qudsi, and all Urdu books.
 
 ## Source gaps
 
-These are properties of the source list, not omissions we invented. Packed row counts follow the list API (`/v2/hadiths`) when it disagrees with the book metadata total.
+These are properties of the source, not omissions we invented. Packed row counts follow the complete public list: the union of `/v2/hadiths?book={id}&chapter={chapter}` (deduplicated by id) when that is fuller than the book-level `/v2/hadiths?book=` pagination, otherwise the book-level list. Book metadata totals that the public API and website do not actually expose are recorded here and were not padded.
 
 ### Al-Musnad Al-Sahih'- Muslim
 - Unused numbers in the source range: [4744]
@@ -59,9 +59,11 @@ These are properties of the source list, not omissions we invented. Packed row c
 
 ### Riyad-Us-Saliheen
 - Unused numbers in the source range: [955]
-- packed 1040 matches list API count
-- unused number 955 in 1..1041 (source gap)
-- API book metadata claims 1906 hadiths and 17 sections; chapters endpoint returned 9. Packed the complete list payload only; nothing invented.
+- Packed 1040 matches both the book-level /v2/hadiths list and the union of all 9 chapter lists (zero extra rows).
+- API book metadata claims 1906 hadiths and 17 sections. /book/16/chapters, a scan of all 2429 rows on /chapters, and muslimbangla.com/hadith-book/16/chapters all expose only these 9 chapters.
+- Chapter 9 (id 579) advertises total_hadith 280 because its number range is 991-1270, not because 280 rows exist: /v2/hadiths?book=16&chapter=579 returns 51, already packed. Type/section/title/status filters did not yield further ids.
+- The public source does not expose the remaining metadata figure; nothing was invented.
+- Unused number 955 in 1..1041 (source gap).
 
 ### Mishkat al-Masabih
 - Unused numbers in the source range: [4317, 4318, 4319, 4457, 4872, 4875, 4999, 5092, 5230, 5376, 5609, 5623]
@@ -92,9 +94,11 @@ These are properties of the source list, not omissions we invented. Packed row c
 
 ### Sharh Ma'ani Al-Athar -Imam Tahawi
 - Unused numbers in the source range: [49, 94, 99, 100, 104, 105, 118, 120, 126, 130, 138, 145, 146, 147, 151, 164, 165, 166, 168, 174, '… (2367 total)']
-- 2367 unused number(s) in 1..7508: 49, 94, 99, 100, 104, 105, 118, 120, 126, 130, 138, 145, 146, 147, 151, 164, 165, 166, 168, 174, 183, 189, 190, 191, 194, 196, 204, 207, 212, 218 ... plus 2337 more (source gap, not invented)
-- 4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches list count (source numbering, not invented)
-- Book metadata claims 7510 hadiths (near the 1..7508 number range); packed 5145 matching the complete list payload.
+- Packed 5145 matches the book-level list, the union of all 23 chapter lists, and a title-level union of chapter 400 (211 = 211). No missing rows.
+- API book metadata claims 7510 hadiths, which is the source number range 1..7510, not a second list. Unused numbers in that range are numbering gaps, not omitted rows.
+- Website /titles pages are a table of contents over the same 5145 hadiths.
+- 2367 unused number(s) in 1..7508 (source gap, not invented).
+- 4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches the complete list (source numbering, not invented).
 
 ### Musnad al-Imam Abu Hanifa
 - Unused numbers in the source range: [114]
@@ -118,9 +122,9 @@ These are properties of the source list, not omissions we invented. Packed row c
 - 27 unused number(s) in 1..895: 48, 64, 65, 66, 67, 68, 69, 71, 72, 93, 171, 172, 303, 517, 518, 519, 520, 521, 522, 523, 524, 525, 557, 613, 793, 795, 796 (source gap, not invented)
 
 ### Al Musnad - Imam Ahmad
-- List API count is 6424 because 781 list rows are identical repeats of the same id on adjacent pages (pagination overlap). 5643 unique source row ids were packed; no wording was dropped. Compared identical payloads for all 727 duplicated ids.
-- Book metadata claims 27647 hadiths and 66 sections; the chapters endpoint returned 47 and the complete unique list payload is 5643 rows. Packed that list only; nothing invented to fill the metadata figure.
-- 564 of 1732 numbers in 1..1732 are reused (source numbering in this Fathur Rabbani edition); unique 1732; packed 5643 unique rows (source numbering, not invented).
+- Rebuilt from per-chapter /v2/hadiths?book=17&chapter={id} lists, deduplicated by id. The book-level /v2/hadiths?book=17 pagination only produced 5643 unique ids (it repeated some rows and never returned others). Chapter lists produced 6422 unique ids; 2 further ids from the book-level cache have no chapter_id and were kept. Packed 6424, all with Arabic and Bangla. Nothing invented.
+- API book metadata still claims 27647 hadiths and 66 sections. The chapters endpoint, a scan of all 2429 global /chapters rows, and muslimbangla.com/hadith-book/17/chapters all expose only these 47 chapters. 27647 is the size of the original Musnad; this edition is Al-Fathur Rabbani and the public source does not expose more than 47 chapters / 6424 rows.
+- Numbers 1..1732 are reused across chapters in this Fathur Rabbani edition; unique numbers 1732; packed 6424 rows (source numbering, not invented).
 
 ### At-Targhib wat-Tarhib
 - Unused numbers in the source range: [1309, 1677, 2109, 3910, 3982, 4687]

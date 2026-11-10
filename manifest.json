@@ -98,9 +98,11 @@
         955
       ],
       "issues": [
-        "packed 1040 matches list API count",
-        "unused number 955 in 1..1041 (source gap)",
-        "API book metadata claims 1906 hadiths and 17 sections; chapters endpoint returned 9. Packed the complete list payload only; nothing invented."
+        "Packed 1040 matches both the book-level /v2/hadiths list and the union of all 9 chapter lists (zero extra rows).",
+        "API book metadata claims 1906 hadiths and 17 sections. /book/16/chapters, a scan of all 2429 rows on /chapters, and muslimbangla.com/hadith-book/16/chapters all expose only these 9 chapters.",
+        "Chapter 9 (id 579) advertises total_hadith 280 because its number range is 991-1270, not because 280 rows exist: /v2/hadiths?book=16&chapter=579 returns 51, already packed. Type/section/title/status filters did not yield further ids.",
+        "The public source does not expose the remaining metadata figure; nothing was invented.",
+        "Unused number 955 in 1..1041 (source gap)."
       ],
       "parts": [
         "hadith/riyadussalihin.sqlite.gz.b64.part01"
@@ -2818,9 +2820,11 @@
         2725
       ],
       "issues": [
-        "2367 unused number(s) in 1..7508: 49, 94, 99, 100, 104, 105, 118, 120, 126, 130, 138, 145, 146, 147, 151, 164, 165, 166, 168, 174, 183, 189, 190, 191, 194, 196, 204, 207, 212, 218 ... plus 2337 more (source gap, not invented)",
-        "4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches list count (source numbering, not invented)",
-        "Book metadata claims 7510 hadiths (near the 1..7508 number range); packed 5145 matching the complete list payload."
+        "Packed 5145 matches the book-level list, the union of all 23 chapter lists, and a title-level union of chapter 400 (211 = 211). No missing rows.",
+        "API book metadata claims 7510 hadiths, which is the source number range 1..7510, not a second list. Unused numbers in that range are numbering gaps, not omitted rows.",
+        "Website /titles pages are a table of contents over the same 5145 hadiths.",
+        "2367 unused number(s) in 1..7508 (source gap, not invented).",
+        "4 numbers appear more than once (203, 1961, 2636, 2725); unique 5141; packed 5145 matches the complete list (source numbering, not invented)."
       ],
       "parts": [
         "hadith/tahawi.sqlite.gz.b64.part01",
@@ -2828,7 +2832,8 @@
         "hadith/tahawi.sqlite.gz.b64.part03"
       ],
       "encoded_size": 5951330,
-      "book_metadata_hadiths": 7510
+      "book_metadata_hadiths": 7510,
+      "book_metadata_sections": 23
     },
     {
       "id": "musnad-abu-hanifa",
@@ -3046,37 +3051,66 @@
       "name_en": "Al Musnad - Imam Ahmad",
       "publication": "বাংলাদেশ ইসলামিক সেন্টার / Bangladesh Islamic Centre",
       "chapters": 47,
-      "hadith_count": 5643,
+      "hadith_count": 6424,
       "claimed": 6424,
       "file": "hadith/musnad-ahmad.sqlite.gz.b64",
-      "size": 2706711,
-      "sha256": "4f3fc8a8f4d2adc53d75cf8523928455f35db08342352fff489708843853b764",
+      "size": 3074963,
+      "sha256": "b94f1625cb023e45047dc5afaaab16946cc87093e0d66cd7177c7c2f6a31bf7c",
       "ready": true,
       "empty_arabic": 0,
       "empty_bangla": 0,
-      "sqlite_size": 17559552,
+      "sqlite_size": 19886080,
       "encoding": "base64",
-      "got": 5643,
+      "got": 6424,
       "number_min": 1,
       "number_max": 1732,
       "unique_numbers": 1732,
       "missing_numbers": [],
-      "duplicate_numbers": [],
+      "duplicate_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
       "issues": [
-        "List API count is 6424 because 781 list rows are identical repeats of the same id on adjacent pages (pagination overlap). 5643 unique source row ids were packed; no wording was dropped. Compared identical payloads for all 727 duplicated ids.",
-        "Book metadata claims 27647 hadiths and 66 sections; the chapters endpoint returned 47 and the complete unique list payload is 5643 rows. Packed that list only; nothing invented to fill the metadata figure.",
-        "564 of 1732 numbers in 1..1732 are reused (source numbering in this Fathur Rabbani edition); unique 1732; packed 5643 unique rows (source numbering, not invented)."
+        "Rebuilt from per-chapter /v2/hadiths?book=17&chapter={id} lists, deduplicated by id. The book-level /v2/hadiths?book=17 pagination only produced 5643 unique ids (it repeated some rows and never returned others). Chapter lists produced 6422 unique ids; 2 further ids from the book-level cache have no chapter_id and were kept. Packed 6424, all with Arabic and Bangla. Nothing invented.",
+        "API book metadata still claims 27647 hadiths and 66 sections. The chapters endpoint, a scan of all 2429 global /chapters rows, and muslimbangla.com/hadith-book/17/chapters all expose only these 47 chapters. 27647 is the size of the original Musnad; this edition is Al-Fathur Rabbani and the public source does not expose more than 47 chapters / 6424 rows.",
+        "Numbers 1..1732 are reused across chapters in this Fathur Rabbani edition; unique numbers 1732; packed 6424 rows (source numbering, not invented)."
       ],
       "parts": [
         "hadith/musnad-ahmad.sqlite.gz.b64.part01",
         "hadith/musnad-ahmad.sqlite.gz.b64.part02"
       ],
-      "encoded_size": 3656435,
+      "encoded_size": 4153899,
       "duplicate_numbers_count": 564,
       "list_api_count": 6424,
       "list_duplicate_ids_repeats": 781,
       "book_metadata_hadiths": 27647,
-      "book_metadata_sections": 66
+      "book_metadata_sections": 66,
+      "chapter_list_unique": 6422,
+      "kept_unchaptered_ids": [
+        1625263,
+        1625302
+      ],
+      "api_book_total_hadith": 27647,
+      "api_book_total_section": 66,
+      "duplicate_number_count": 564
     },
     {
       "id": "targhib",
