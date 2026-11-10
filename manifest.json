@@ -78,13 +78,35 @@
       "name_ar": "رياض الصالحين من كلام سيد المرسلين",
       "name_en": "Riyad-Us-Saliheen",
       "publication": "",
-      "chapters": 17,
-      "hadith_count": 1906,
-      "claimed": 1906,
-      "file": "hadith/riyadussalihin.sqlite.gz",
-      "size": 0,
-      "sha256": "",
-      "ready": false
+      "chapters": 9,
+      "hadith_count": 1040,
+      "claimed": 1040,
+      "file": "hadith/riyadussalihin.sqlite.gz.b64",
+      "size": 1289427,
+      "sha256": "1edb793ab820defce4c2f301dc205ce0fdbc3e61ba7694231d1ad228870a5f05",
+      "ready": true,
+      "encoding": "base64",
+      "sqlite_size": 7725056,
+      "got": 1040,
+      "empty_arabic": 0,
+      "empty_bangla": 0,
+      "number_min": 1,
+      "number_max": 1041,
+      "unique_numbers": 1040,
+      "missing_numbers": [
+        955
+      ],
+      "issues": [
+        "packed 1040 matches list API count",
+        "unused number 955 in 1..1041 (source gap)",
+        "API book metadata claims 1906 hadiths and 17 sections; chapters endpoint returned 9. Packed the complete list payload only; nothing invented."
+      ],
+      "parts": [
+        "hadith/riyadussalihin.sqlite.gz.b64.part01"
+      ],
+      "encoded_size": 1741858,
+      "api_book_total_hadith": 1906,
+      "api_book_total_section": 17
     },
     {
       "id": "mishkat",
